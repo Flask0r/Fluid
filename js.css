@@ -8,49 +8,30 @@
     }
 }
 @keyframes Scale_anim {
-    from {
-        transform: scale(1);
-    }
     to {
         transform: scale(1.1);
     }
 }
-@keyframes Scale_anim_2 {
-    from {
-        transform: scale(0.5);
-    }
-    to {
-        transform: scale(0.55);
-    }
-}
 @keyframes opacity {
-    from {
-        pointer-events: none;
-        opacity: 0;
-    }
     to {
         pointer-events:all;
         opacity: 100%;
-    }
-}
-@keyframes opacity_reverse {
-    from {
-        pointer-events:all;
-        opacity: 100%;
-    }
-    to {
-        pointer-events: none;
-        opacity: 0;
     }
 }
 body {
-    min-height: 100vh;
     margin: 0;
     background: rgb(255, 255, 255);
     overflow: hidden;
     transition: background 0.5s ease;
 }
+/* TEXT STANDARD */
+.close_button, .header_info, .text_info, .header, .index, #right_button, #left_button {
+    font-family: "Paytone One", sans-serif;
+    color: rgba(0, 162, 255, 0.486);
+    text-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+} 
 .close_button {
+    font-size: 70px;
     transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
     z-index: 9991;
     cursor: pointer;
@@ -59,10 +40,6 @@ body {
     right: 0;
     position: absolute;
     text-align: center;
-    font-size: 70px;
-    font-family: "Paytone One", sans-serif;
-    color: rgba(0, 162, 255, 0.486);
-    text-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
 }
 .upper_2 {
     right: 30vw;
@@ -96,9 +73,6 @@ body {
     margin-top: 0;
     z-index: 5;
     font-size: 100px;
-    font-family: "Paytone One", sans-serif;
-    color: rgba(0, 162, 255, 0.486);
-    text-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
     transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .text_info {
@@ -106,9 +80,6 @@ body {
     margin-left: 44%;
     z-index: 5;
     font-size: 50px;
-    font-family: "Paytone One", sans-serif;
-    color: rgba(0, 162, 255, 0.486);
-    text-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
     transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .header {
@@ -120,24 +91,20 @@ body {
     border-radius: 40vw;
     text-align: center;
     font-size: 60px;
-    font-family: "Paytone One", sans-serif;
-    color: rgba(0, 162, 255, 0.486);
-    text-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
     transition: background 0.5s ease, box-shadow 0.5s ease, color 0.5s ease;
 }
 
 .upper, .pants {
   position: absolute;
+  transform: scale(0.5);
 }
 
 .upper {
     z-index: 2;
-    transform: scale(0.5);
     top: -30%;
 }
 .pants {
     z-index: 1;
-    transform: scale(0.5);
     top: 15%;
 }
 .block {
@@ -154,12 +121,8 @@ body {
     overflow: hidden;
 }
 .index {
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
     display: inline-flex;
     font-size: 60px;
-    font-family: "Paytone One", sans-serif;
-    color: rgba(0, 162, 255, 0.486);
-    text-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
     position: relative;
     text-align: center;
     justify-content: center;
@@ -181,37 +144,20 @@ body {
     width: 40vw;
     background: rgb(0, 162, 255);
     opacity: 0.5;
+    z-index: -1;
+    top: 20%;
+    left: 10%;
 }
 .blur3, .blur4 {
     height: 15vw;
     width: 15vw;
     opacity: 0.9;
     background: rgb(0, 47, 255);
-}
-.blur {
-    z-index: -1;
-    top: 20%;
-    left: 10%;
-}
-.blur2 {
-    z-index: -1;
-    bottom: 20%;
-    right: 10%;
-}
-.blur3 {
     z-index: -2;
     top: 10%;
     right: 10%;
 }
-.blur4 {
-    z-index: -2;
-    bottom: 10%;
-    left: 10%;
-}
-.index.anim {
-    animation: Scale_anim 0.25s cubic-bezier(0.25, 1, 0.5, 1) 2 alternate forwards;
-}
-#right_button.anim, #left_button.anim {
+.index.anim, #right_button.anim, #left_button.anim {
     animation: Scale_anim 0.25s cubic-bezier(0.25, 1, 0.5, 1) 2 alternate forwards;
 }
 .buttons_container {
@@ -233,8 +179,6 @@ body {
     border-radius: 80%;
     text-align: center;
     font-size: 3vw;
-    font-family: "Paytone One", sans-serif;
-    color: rgba(0, 162, 255, 0.486);
     user-select: none;
     transition: background 0.5s ease, box-shadow 0.5s ease, color 0.5s ease;
 }
@@ -257,7 +201,6 @@ body.light .selector {
     aspect-ratio: 1 / 1;
     background-color: rgba(0, 162, 255, 0.486);
     border-radius: 50%;
-    transform:translateX(0);
     transition: all 0.5s ease;
 }
 body.light .circle {
@@ -289,24 +232,13 @@ body.light .index {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
     background: rgba(0, 0, 0, 0.4);
 }
-body.light .blur {
+body.light .blur, body.light .blur2 {
     background: rgb(255, 98, 208);
 }
-body.light .blur2 {
-    background: rgb(255, 98, 208);
-}
-body.light .blur3 {
+body.light .blur3, body.light .blur4 {
     background: rgb(212, 0, 255);
 }
-body.light .blur4 {
-    background: rgb(212, 0, 255);
-}
-body.light #right_button {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
-    background: rgba(0, 0, 0, 0.4);
-    color: rgba(255, 98, 208, 0.6);
-}
-body.light #left_button {
+body.light #right_button, body.light #left_button {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
     background: rgba(0, 0, 0, 0.4);
     color: rgba(255, 98, 208, 0.6);
@@ -314,13 +246,7 @@ body.light #left_button {
 body.light .block_info {
     background: rgba(0, 0, 0, 0.4);
 }
-body.light .text_info {
-    color: rgba(255, 98, 208, 0.6);
-}
-body.light .header_info {
-    color: rgba(255, 98, 208, 0.6);
-}
-body.light .close_button {
+body.light .text_info, body.light .header_info, body.light .close_button {
     color: rgba(255, 98, 208, 0.6);
 }
 #track {
@@ -328,54 +254,20 @@ body.light .close_button {
     transition: transform 1.4s cubic-bezier(0.25, 1, 0.5, 1);
     will-change: transform;
 }
-.container {
+.container, .container_2, .container_3, .container_4 {
     width: 100vw;
     flex-shrink: 0;
     display: flex;
     justify-content: center;
     gap: 4vw;
-    transform: translateX(0);
-    position: relative;
-    animation: slideUp 1.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-}
-.container_2 {
-    width: 100vw;
-    flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    gap: 4vw;
-    transform: translateX(0);
-    animation: slideUp 1.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-}
-.container_3 {
-    width: 100vw;
-    flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    gap: 4vw;
-    transform: translateX(0);
-    position: relative;
-    animation: slideUp 1.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-}
-.container_4 {
-    width: 100vw;
-    flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    gap: 4vw;
-    transform: translateX(0);
     position: relative;
     animation: slideUp 1.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 .index_container {
     width: 100%;
-    justify-content: center;
-    position: relative;
-    display: flex;
     margin-top: 2vh;
-    animation: slideUp 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
-.header_container {
+.index_container, .header_container {
     position: relative;
     justify-content: center;
     display: flex;

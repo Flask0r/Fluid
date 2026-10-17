@@ -23,6 +23,26 @@
         transform: scale(0.55);
     }
 }
+@keyframes opacity {
+    from {
+        pointer-events: none;
+        opacity: 0;
+    }
+    to {
+        pointer-events:all;
+        opacity: 100%;
+    }
+}
+@keyframes opacity_reverse {
+    from {
+        pointer-events:all;
+        opacity: 100%;
+    }
+    to {
+        pointer-events: none;
+        opacity: 0;
+    }
+}
 body {
     min-height: 100vh;
     margin: 0;
@@ -30,16 +50,66 @@ body {
     overflow: hidden;
     transition: background 0.5s ease;
 }
-.block_info {
-    visibility: hidden;
-    margin-right: 13.8%;
-    margin-top: 166px;
+.close_button {
+    transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 9991;
+    cursor: pointer;
+    top: -1.5vw;
+    margin: 1vw;
     right: 0;
-    height: 70%;
-    width: 70.5%;
-    background-color: rgb(255, 255, 255);
+    position: absolute;
+    text-align: center;
+    font-size: 70px;
+    font-family: "Paytone One", sans-serif;
+    color: rgba(0, 162, 255, 0.486);
+    text-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+.upper_2 {
+    right: 30vw;
+    position: absolute;
+    z-index: 2;
+    transform: scale(0.7);
+    top: -10%;
+}
+.block_info.open {
+    pointer-events:all;
+    opacity: 100%;
+}
+.block_info {
+    backdrop-filter: blur(2vw);
+    pointer-events: none;
+    opacity: 0;
+    border-radius: 4vh;
+    left: 17%;
+    top: 16%;
+    height: 73vh;
+    width: 66vw;
+    background: rgba(255, 255, 255, 0.4);
     position: absolute;
     z-index: 999;
+    transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+.header_info {
+    text-align: right;
+    margin-right: 10%;
+    margin-top: 0;
+    z-index: 5;
+    font-size: 100px;
+    font-family: "Paytone One", sans-serif;
+    color: rgba(0, 162, 255, 0.486);
+    text-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.text_info {
+    margin-top: -5%;
+    margin-left: 44%;
+    z-index: 5;
+    font-size: 50px;
+    font-family: "Paytone One", sans-serif;
+    color: rgba(0, 162, 255, 0.486);
+    text-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .header {
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
@@ -70,7 +140,6 @@ body {
     transform: scale(0.5);
     top: 15%;
 }
-
 .block {
     position: relative;
     display: flex;
@@ -138,12 +207,6 @@ body {
     z-index: -2;
     bottom: 10%;
     left: 10%;
-}
-#tshirt_1.anim_2, #tshirt_2.anim_2, #tshirt_3.anim_2, #tshirt_4.anim_2, #tshirt_5.anim_2, #tshirt_6.anim_2, #tshirt_7.anim_2, #tshirt_8.anim_2, #tshirt_9.anim_2, #tshirt_10.anim_2, #tshirt_11.anim_2, #tshirt_12.anim_2 {
-    animation: Scale_anim_2 0.1s cubic-bezier(0.25, 1, 0.5, 1) 2 alternate forwards;
-}
-#pants_1.anim_2, #pants_2.anim_2, #pants_3.anim_2, #pants_4.anim_2, #pants_5.anim_2, #pants_6.anim_2, #pants_7.anim_2, #pants_8.anim_2, #pants_9.anim_2, #pants_10.anim_2, #pants_11.anim_2, #pants_12.anim_2 {
-    animation: Scale_anim_2 0.1s cubic-bezier(0.25, 1, 0.5, 1) 2 alternate forwards;
 }
 .index.anim {
     animation: Scale_anim 0.25s cubic-bezier(0.25, 1, 0.5, 1) 2 alternate forwards;
@@ -246,6 +309,18 @@ body.light #right_button {
 body.light #left_button {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
     background: rgba(0, 0, 0, 0.4);
+    color: rgba(255, 98, 208, 0.6);
+}
+body.light .block_info {
+    background: rgba(0, 0, 0, 0.4);
+}
+body.light .text_info {
+    color: rgba(255, 98, 208, 0.6);
+}
+body.light .header_info {
+    color: rgba(255, 98, 208, 0.6);
+}
+body.light .close_button {
     color: rgba(255, 98, 208, 0.6);
 }
 #track {

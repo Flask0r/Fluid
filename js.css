@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Paytone+One&display=swap');
+@keyframes slideUp {
+    from {
+        padding-top: 100%;
+    }
+    to {
+        padding-top: 0;
+    }
+}
+@keyframes Scale_anim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+@keyframes Scale_anim_2 {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(0.55);
+    }
+}
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: rgb(255, 255, 255);
+    overflow: hidden;
+    transition: background 0.5s ease;
+}
+.block_info {
+    visibility: hidden;
+    margin-right: 13.8%;
+    margin-top: 166px;
+    right: 0;
+    height: 70%;
+    width: 70.5%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    z-index: 999;
+}
+.header {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.4);
+    padding: 4vh;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-radius: 40vw;
+    text-align: center;
+    font-size: 60px;
+    font-family: "Paytone One", sans-serif;
+    color: rgba(0, 162, 255, 0.486);
+    text-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    transition: background 0.5s ease, box-shadow 0.5s ease, color 0.5s ease;
+}
+
+.upper, .pants {
+  position: absolute;
+}
+
+.upper {
+    z-index: 2;
+    transform: scale(0.5);
+    top: -30%;
+}
+.pants {
+    z-index: 1;
+    transform: scale(0.5);
+    top: 15%;
+}
+
+.block {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.4);
+    height: 72vh;
+    width: 19vw;
+    border-radius: 10vh;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background 0.5s ease, box-shadow 0.5s ease;
+    overflow: hidden;
+}
+.index {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    display: inline-flex;
+    font-size: 60px;
+    font-family: "Paytone One", sans-serif;
+    color: rgba(0, 162, 255, 0.486);
+    text-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.4);
+    height: 80%;
+    width: 5%;
+    border-radius: 10vh;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    transition: background 0.5s ease, box-shadow 0.5s ease, color 0.5s ease;
+}
+.blur, .blur2, .blur3, .blur4 {
+    border-radius: 50%;
+    filter: blur(7vw);
+    position: absolute;
+    transition: background 0.5s ease;
+}
+.blur, .blur2 {
+    height: 40vw;
+    width: 40vw;
+    background: rgb(0, 162, 255);
+    opacity: 0.5;
+}
+.blur3, .blur4 {
+    height: 15vw;
+    width: 15vw;
+    opacity: 0.9;
+    background: rgb(0, 47, 255);
+}
+.blur {
+    z-index: -1;
+    top: 20%;
+    left: 10%;
+}
+.blur2 {
+    z-index: -1;
+    bottom: 20%;
+    right: 10%;
+}
+.blur3 {
+    z-index: -2;
+    top: 10%;
+    right: 10%;
+}
+.blur4 {
+    z-index: -2;
+    bottom: 10%;
+    left: 10%;
+}
+#tshirt_1.anim_2, #tshirt_2.anim_2, #tshirt_3.anim_2, #tshirt_4.anim_2, #tshirt_5.anim_2, #tshirt_6.anim_2, #tshirt_7.anim_2, #tshirt_8.anim_2, #tshirt_9.anim_2, #tshirt_10.anim_2, #tshirt_11.anim_2, #tshirt_12.anim_2 {
+    animation: Scale_anim_2 0.1s cubic-bezier(0.25, 1, 0.5, 1) 2 alternate forwards;
+}
+#pants_1.anim_2, #pants_2.anim_2, #pants_3.anim_2, #pants_4.anim_2, #pants_5.anim_2, #pants_6.anim_2, #pants_7.anim_2, #pants_8.anim_2, #pants_9.anim_2, #pants_10.anim_2, #pants_11.anim_2, #pants_12.anim_2 {
+    animation: Scale_anim_2 0.1s cubic-bezier(0.25, 1, 0.5, 1) 2 alternate forwards;
+}
+.index.anim {
+    animation: Scale_anim 0.25s cubic-bezier(0.25, 1, 0.5, 1) 2 alternate forwards;
+}
+#right_button.anim, #left_button.anim {
+    animation: Scale_anim 0.25s cubic-bezier(0.25, 1, 0.5, 1) 2 alternate forwards;
+}
+.buttons_container {
+    width: 100vw;
+    top: 40vh;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+}
+#right_button, #left_button {
+    margin: 1%;
+    z-index: 1000;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    height: 4%;
+    width: 4%;
+    aspect-ratio: 1 / 1;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 80%;
+    text-align: center;
+    font-size: 3vw;
+    font-family: "Paytone One", sans-serif;
+    color: rgba(0, 162, 255, 0.486);
+    user-select: none;
+    transition: background 0.5s ease, box-shadow 0.5s ease, color 0.5s ease;
+}
+.selector {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 15vh;
+    height: 8vh;
+    border-radius: 50vw;
+    transition: all 0.5s ease;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 3%;
+}
+body.light .selector {
+    background: rgba(0, 0, 0, 0.4);
+}
+.circle {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: rgba(0, 162, 255, 0.486);
+    border-radius: 50%;
+    transform:translateX(0);
+    transition: all 0.5s ease;
+}
+body.light .circle {
+    background-color:rgba(255, 98, 208, 0.6);
+    transform:translateX(100%)
+}
+.selector_container {
+    z-index: 1000;
+    margin: 4vh;
+    right: 0;
+    animation: slideUp 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    position: absolute;
+}
+
+body.light .header {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    color: rgba(255, 98, 208, 0.6);
+    background: rgba(0, 0, 0, 0.4);
+}
+body.light {
+    background: rgb(0, 0, 0);
+}
+body.light .block {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.4);
+}
+body.light .index {
+    color: rgba(255, 98, 208, 0.6);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.4);
+}
+body.light .blur {
+    background: rgb(255, 98, 208);
+}
+body.light .blur2 {
+    background: rgb(255, 98, 208);
+}
+body.light .blur3 {
+    background: rgb(212, 0, 255);
+}
+body.light .blur4 {
+    background: rgb(212, 0, 255);
+}
+body.light #right_button {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.4);
+    color: rgba(255, 98, 208, 0.6);
+}
+body.light #left_button {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.4);
+    color: rgba(255, 98, 208, 0.6);
+}
+#track {
+    display: flex;
+    transition: transform 1.4s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+}
+.container {
+    width: 100vw;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    gap: 4vw;
+    transform: translateX(0);
+    position: relative;
+    animation: slideUp 1.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+.container_2 {
+    width: 100vw;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    gap: 4vw;
+    transform: translateX(0);
+    animation: slideUp 1.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+.container_3 {
+    width: 100vw;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    gap: 4vw;
+    transform: translateX(0);
+    position: relative;
+    animation: slideUp 1.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+.container_4 {
+    width: 100vw;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    gap: 4vw;
+    transform: translateX(0);
+    position: relative;
+    animation: slideUp 1.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+.index_container {
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    margin-top: 2vh;
+    animation: slideUp 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+.header_container {
+    position: relative;
+    justify-content: center;
+    display: flex;
+    animation: slideUp 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}

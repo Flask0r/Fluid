@@ -1,5 +1,5 @@
 let light_mode = false;
-let theme = localStorage.getItem('theme');
+let theme = LocalStorage.getItem('theme');
 console.log(theme)
     const body = document.getElementById('body');
     const selector = document.getElementById('selector');
@@ -10,9 +10,9 @@ if(theme == 'dark') {
     light_mode = !light_mode;
     console.log("Состояние: " + light_mode)
     if(light_mode == true) {
-        localStorage.setItem('theme', 'dark')
+        LocalStorage.setItem('theme', 'dark')
     } else {
-        localStorage.setItem('theme', 'light')
+        LocalStorage.setItem('theme', 'light')
     }
 }
 selector.addEventListener('click', () => {
@@ -20,9 +20,9 @@ selector.addEventListener('click', () => {
     light_mode = !light_mode;
     console.log("Состояние: " + light_mode)
     if(light_mode == true) {
-        localStorage.setItem('theme', 'dark')
+        LocalStorage.setItem('theme', 'dark')
     } else {
-        localStorage.setItem('theme', 'light')
+        LocalStorage.setItem('theme', 'light')
     }
 });
 
